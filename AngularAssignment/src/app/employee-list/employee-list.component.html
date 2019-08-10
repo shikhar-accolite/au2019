@@ -1,0 +1,17 @@
+<h3 align="center"><u>List of Employees</u></h3>
+<br><br>
+<table border="0" width=100% >
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th></th>
+        <th></th>
+    </tr>
+    <tr *ngFor="let employee of employees" align="center">
+        <td align="center"><a (click)="detailRoute(employee.id)">{{employee.id}}</a></td>
+        <td>{{employee.name}}</td>
+        <td align="center">
+            <button *ngIf="flag==true" (click)="remove(employee.id)">Delete</button>
+        </td>
+    </tr>
+</table>

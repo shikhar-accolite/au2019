@@ -1,0 +1,9 @@
+<h3>List of Departments</h3>
+<table border="1" width=400>
+    <tr>
+        <th>Departments</th>
+    </tr>
+    <tr *ngFor="let department of departments" align="center">
+        <td><a [routerLink]="['/department-detail', department.dept_name]">{{department.dept_name}}</a></td>
+    </tr>
+</table>

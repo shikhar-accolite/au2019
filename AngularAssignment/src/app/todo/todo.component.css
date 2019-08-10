@@ -1,0 +1,11 @@
+#parent_div_1 {
+    width: 40%;
+    border: 1px solid;
+    margin-left: 100px;
+    float: left;
+}
+#parent_div_2 {
+    width: 40%;
+    margin-right: 100px;
+    float: right;
+}

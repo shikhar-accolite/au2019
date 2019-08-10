@@ -1,0 +1,39 @@
+<div align="center" *ngIf="flag == true">
+    <table align="center" border="1" width=400>
+        <tr>
+            <th><h4>EmployeeID </h4></th>
+            <td>{{employee.id}}</td>
+        </tr>
+        <tr>
+            <th><h4>Name</h4></th>
+            <td>
+                <div *ngIf="!flag_name">{{employee.name}}</div>
+                <div *ngIf="flag_name">
+                    <input type="string" (keyup.enter)="onEnter('name')" [(ngModel)]="employee.name">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th><h4>Age</h4></th>
+            <td>
+                <div *ngIf="!flag_age">{{employee.age}}</div>
+                <div *ngIf="flag_age">
+                    <input type="number" (keyup.enter)="onEnter('age')" [(ngModel)]="employee.age">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th><h4>Department</h4></th>
+            <td>
+                <div *ngIf="!flag_dept">{{employee.dept}}</div>
+                <div *ngIf="flag_dept">
+                    <input type="string" (keyup.enter)="onEnter('dept')" [(ngModel)]="employee.dept">
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <br />
+    
+    <button *ngIf="flag_update == true" (click)="onUpdate()">Update</button>
+</div>
